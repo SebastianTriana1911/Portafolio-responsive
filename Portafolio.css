@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Montserrat&family=Poppins:wght@300&family=Tilt+Prism&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+.inicio {
+    background-color: #191c32;
+    width: 100%;
+    height: 100%;
+}
+
+.inicio .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.inicio .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+.inicio .header .logo .t{
+    color: aqua;
+}
+
+.inicio .header .menu {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+}
+
+.inicio .header .menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    right: -10%;
+}
+
+.inicio .header .menu ul li a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.inicio .header .menu ul li a:hover {
+    background-color: aqua;
+    color: black;
+    font-weight: bolder;
+    padding: 8px;
+    transition: 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px aqua;
+}
+
+/* ------------------------------------------------------------------------------- */
+
