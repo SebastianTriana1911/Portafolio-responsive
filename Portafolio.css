@@ -5,20 +5,45 @@
     margin: 0px;
 }
 
-.inicio {
+body {
     background-color: #191c32;
-    width: 100%;
-    height: 100%;
 }
 
-.inicio .header {
+body::-webkit-scrollbar{
+    width: 9px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: white;
+}
+
+#inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 13vh 87vh;
+    grid-template-areas: 
+    "header    header"
+    "content   content-2";
+}
+
+#inicio .header {
+    grid-area: header;
+    background-color: #191c32;
+    width: 100%;
+    height: 13%;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 3px solid white;
+}
+
+#inicio .header .contenedor-header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%;
 }
 
-.inicio .header .logo {
+#inicio .header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,18 +54,18 @@
     font-size: 12pt;
 }
 
-.inicio .header .logo .t{
+#inicio .header .logo .t{
     color: aqua;
 }
 
-.inicio .header .menu {
+#inicio .header .menu {
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 70%;
     height: 100%;
 }
 
-.inicio .header .menu ul {
+#inicio .header .menu ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,13 +77,13 @@
     right: -10%;
 }
 
-.inicio .header .menu ul li a {
+#inicio .header .menu ul li a {
     color: white;
     font-weight: bolder;
     text-decoration: none;
 }
 
-.inicio .header .menu ul li a:hover {
+#inicio .header .menu ul li a:hover {
     background-color: aqua;
     color: black;
     font-weight: bolder;
@@ -68,5 +93,644 @@
     box-shadow: 0 0 10px aqua;
 }
 
+#inicio .header .menu ul li .inicio-2 {
+    color: aqua;
+}
+
 /* ------------------------------------------------------------------------------- */
 
+
+.grid-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: content;
+    background-color: #191c32;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-1 .contenedor-grid-1 {
+    width: 80%;
+    color: white;
+    position: relative;
+    left: 10%;
+}
+
+.grid-1 .contenedor-grid-1 .contenedor-titulo{
+    display: grid;
+    gap: 4px;
+    font-size: 42pt;
+    margin-bottom: 4%;
+}
+
+.grid-1 .contenedor-grid-1 .contenedor-titulo-2 {
+    display: flex;
+    gap: 2%;
+}
+
+.grid-1 .contenedor-grid-1 .contenedor-titulo .s{
+    color: aqua;
+}
+
+.grid-1 .contenedor-grid-1 .contenedor-titulo .barra{
+    width: 36%;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 7px;
+    box-shadow: 0 0 8px aqua;
+}
+
+.contenedor-informacion {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.contenedor-boton {
+    width: 100%;
+}
+
+.contenedor-boton .siguiente button {
+    padding: 8px;
+    font-weight: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px aqua;
+    cursor: pointer;
+}
+
+.contenedor-boton .siguiente button:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.grid-2 {
+    grid-area: content-2;
+    background-color: #191c32;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-2 .imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-2 .imagen .img{
+    width: 50%;
+    height: 80%;
+    border: 7px solid aqua;
+    border-radius: 7px;
+    box-shadow: 0 0 10px aqua;
+    position: relative;
+    left: -10%;
+}
+
+.grid-2 .imagen .img:hover {
+    box-shadow: 0 0 30px aqua;
+    transition: 0.5s;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+#sobre-mi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 13vh 87vh;
+    grid-template-areas: 
+    "header    header"
+    "content-3  content-4";
+}
+
+#sobre-mi .grid-1 {
+    grid-area: content-3;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+    gap: 4%
+}
+
+#sobre-mi .grid-1 .titulo-barra {
+    display: grid;
+    gap: 10%;
+}
+
+#sobre-mi .grid-1 .contenedor-titulo {
+    width: 100%;
+    height: 10%;
+}
+
+#sobre-mi .grid-1 .contenedor-titulo .titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 24pt;
+}
+
+#sobre-mi .grid-1 .titulo-barra .contenedor-barra {
+    display: flex;
+    justify-content: center;
+}
+
+#sobre-mi .grid-1 .titulo-barra .contenedor-barra .barra {
+    width: 50%;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 3px;
+    box-shadow: 0 0 10px aqua;
+}
+
+#sobre-mi .grid-1 .contenedor-informacion {
+    width: 80%;
+    text-align: center;
+}
+
+#sobre-mi .grid-2 {
+    grid-area: content-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+    gap: 4%;
+    position: relative;
+    top: -2%
+}
+
+#sobre-mi .grid-2 .titulo-barra {
+    display: grid;
+    gap: 10%;
+}
+
+#sobre-mi .grid-2 .contenedor-titulo {
+    width: 100%;
+    height: 10%;
+}
+
+#sobre-mi .grid-2 .contenedor-titulo .titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 24pt;
+}
+
+#sobre-mi .grid-2 .titulo-barra .contenedor-barra {
+    display: flex;
+    justify-content: center;
+}
+
+#sobre-mi .grid-2 .titulo-barra .contenedor-barra .barra {
+    width: 50%;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 3px;
+    box-shadow: 0 0 10px aqua;
+}
+
+#sobre-mi .grid-2 .contenedor-informacion {
+    width: 80%;
+    text-align: center;
+}
+
+#sobre-mi .contenedor-boton {
+    display: flex;
+    grid-column-start: content-3;
+    grid-column-end: content-4;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: -670%;
+}
+
+#sobre-mi .contenedor-boton a button{
+    padding: 8px;
+    font-weight: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px aqua;
+    cursor: pointer;
+}
+
+#sobre-mi .contenedor-boton a button:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+#proyectos {
+    display: grid;
+    grid-template-rows: 13vh 87vh;
+    grid-template-areas: 
+    "header"
+    "content" ;
+}
+
+#proyectos .contenedor-proyectos {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#proyectos .titulo-barra {
+    display: grid;
+    width: 100%;
+    height: 7%;
+    position: relative;
+    top: -5%;
+}
+
+#proyectos .titulo-barra .contenedor-titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 20pt;
+    color: white;
+}
+
+#proyectos .titulo-barra .contenedor-barra {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#proyectos .titulo-barra .contenedor-barra .barra {
+    display: flex;
+    width: 20%;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 3px;
+    box-shadow: 0 0 10px aqua;
+}
+
+#proyectos .contenedor-proyectos-scroll {
+    background-color: #191c32;
+}
+
+#proyectos .contenedor-proyectos-scroll::-webkit-scrollbar{
+    width: 9px;
+}
+
+#proyectos .contenedor-proyectos-scroll::-webkit-scrollbar-thumb{
+    background: white;
+}
+
+#proyectos .contenedor-proyectos-scroll{
+    display: flex;
+    gap: 4%;
+    width: 65%;
+    height: 67%;
+    border-radius: 15px 0 0 15px;
+    border: 4px solid aqua;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px aqua;
+}
+
+#proyectos .contenedor-proyectos-scroll:hover {
+    box-shadow: 0 0 20px aqua;
+    transition: 0.5s;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto {
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    width: 22%;
+    height: 72%;
+    background-color: #2a2f59;
+    border-radius: 15px;
+    border: 3px solid aqua;
+    box-shadow: 0 0 5px aqua;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto:hover {
+    box-shadow: 0 0 10px aqua;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-imagen {
+    margin: auto;
+    width: 80%;
+    height: 40%;
+    background-image: url(https://softwarewebsas.com/public/images/blog/dev.webp);
+    background-size: cover;
+    border-radius: 15px;
+    margin-top: 10%;
+    border: 3px solid white;
+    box-shadow: 0 0 7px white;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-titulo .titulo {
+    display: flex;
+    color: white;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-links{
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-links a {
+    color: white;
+    font-size: 20pt;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-descripcion button {
+    padding: 8px;
+    font-weight: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px aqua;
+    cursor: pointer;
+}
+
+#proyectos .contenedor-proyectos-scroll .proyecto .contenedor-descripcion button:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+#proyectos .contenedor-boton {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40%;
+    position: relative;
+    bottom: -710%;
+}
+
+#proyectos .contenedor-boton a button{
+    padding: 8px;
+    font-weight: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px aqua;
+    cursor: pointer;
+}
+
+#proyectos .contenedor-boton a button:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+/* -------------------------------------------------------------------- */
+
+#contactame {
+    display: grid;
+    grid-template-rows: 13vh 67vh 20vh;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer" ;
+}
+
+#contactame .contenedor-contactame {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#contactame .titulo-barra {
+    display: grid;
+    width: 80%;
+    height: 7%;
+    margin-top: 2%;
+    position: relative;
+    left: -7%;
+}
+
+#contactame .titulo-barra .contenedor-titulo {
+    display: flex;
+    justify-content: start;
+    font-size: 25pt;
+    color: white;
+}
+
+#contactame .titulo-barra .contenedor-barra {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+#contactame .titulo-barra .contenedor-barra .barra {
+    display: flex;
+    width: 15%;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 3px;
+    box-shadow: 0 0 10px aqua;
+}
+
+#contactame .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#contactame .formulario .contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13%;
+    width: 40%;
+    height: 80%;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-nombre,
+.contenedor-email,
+.contenedor-mensaje {
+    display: grid;
+    gap: 10%;
+    position: relative;
+    left: 10%;
+    color: white;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-nombre,
+.contenedor-email,
+.contenedor-mensaje
+label {
+    font-size: 17pt;
+    font-weight: bolder;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-nombre input {
+    width:80%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 4px solid aqua;
+    background-color: #191c32;
+    color: white;
+    outline: none;
+    box-shadow: 0 0 5px aqua;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-nombre,
+.contenedor-email,
+input::placeholder {
+    color:white;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-email input {
+    width:80%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 4px solid aqua;
+    background-color: #191c32;
+    color: white;
+    outline: none;
+    box-shadow: 0 0 5px aqua;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-mensaje textarea {
+    width:80%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 4px solid aqua;
+    background-color: #191c32;
+    color: white;
+    outline: none;
+    box-shadow: 0 0 5px aqua;
+    resize: none;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-mensaje textarea ::placeholder{
+    color: white;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-boton {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    top: -22%;
+    gap: 95%
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-boton a {
+    position: relative;
+    left: -10%;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-boton button {
+    padding: 8px;
+    font-weight: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px aqua;
+    cursor: pointer;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-boton input {
+    padding: 8px;
+    font-weight: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px aqua;
+    cursor: pointer;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-boton button:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+#contactame .formulario .contenedor-formulario .contenedor-boton input:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
+}
+
+/* -------------------------------------------------------------------- */
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.footer:hover {
+    box-shadow: 0 0 50px aqua;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    padding-top: 1%;
+    padding-bottom: 17px;
+}
+
+div#contenido-footer h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    padding-bottom: 17px;
+}
+
+div#descripcion h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+div#aplicaciones {
+    display: flex;
+    justify-content: center; 
+    padding-top: 18px;
+}
+
+div#aplicaciones a{
+    color: black;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    width: 8%;
+    font-size: 16pt;
+}
